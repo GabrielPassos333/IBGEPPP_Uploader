@@ -5,6 +5,11 @@
   text-align: center;
 }
 
+body {
+  background: #181c2a;
+  color: #f3f6fa;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -39,4 +44,139 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.container {
+  max-width: 480px;
+  margin: 40px auto;
+  background: #232946;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+  padding: 32px 24px 24px 24px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 28px;
+  color: #eebf6e;
+  font-size: 1.7rem;
+}
+
+.form-ppp {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.form-group label {
+  color: #eebf6e;
+  font-weight: 500;
+  min-width: 160px;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.form-group input,
+.form-group select {
+  flex: 1;
+  border: 1px solid #393e5a;
+  border-radius: 6px;
+  padding: 7px 8px;
+  font-size: 1rem;
+  background: #181c2a;
+  color: #f3f6fa;
+  margin-left: 0;
+}
+
+input[type="file"] {
+  border: none;
+  background: transparent;
+  color: #f3f6fa;
+  padding-left: 0;
+}
+
+input, select {
+  border: 1px solid #393e5a;
+  border-radius: 6px;
+  padding: 7px 8px;
+  font-size: 1rem;
+  background: #181c2a;
+  color: #f3f6fa;
+}
+
+input:focus, select:focus {
+  outline: 2px solid #eebf6e;
+  border-color: #eebf6e;
+}
+
+.form-checkbox {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  justify-content: flex-start;
+}
+
+.btn-enviar {
+  margin-top: 10px;
+  padding: 10px 0;
+  background: #eebf6e;
+  color: #232946;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-enviar:disabled {
+  background: #b3c6e0;
+  color: #232946;
+  cursor: not-allowed;
+}
+
+.error-msg {
+  color: #d32f2f;
+  background: #ffeaea;
+  border-radius: 6px;
+  padding: 10px;
+  margin-top: 18px;
+  text-align: center;
+}
+
+.resultados {
+  margin-top: 32px;
+  background: #232946;
+  border-radius: 8px;
+  padding: 18px 14px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.10);
+}
+.resultados h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #eebf6e;
+}
+.resultado-item {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.resultado-item a {
+  color: #eebf6e;
+  text-decoration: underline;
+  font-weight: 500;
+}
+.resultado-item span {
+  color: #d32f2f;
 }

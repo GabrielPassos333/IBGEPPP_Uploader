@@ -1,54 +1,59 @@
-# React + TypeScript + Vite
+# Processamento GNSS IBGE PPP
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é uma aplicação web desenvolvida em **React + TypeScript + Vite** para facilitar o envio de arquivos GNSS ao serviço PPP do IBGE, permitindo o processamento de múltiplos arquivos simultaneamente e o download automático dos resultados.
 
-Currently, two official plugins are available:
+## Tecnologias Utilizadas
+- **React**: Interface de usuário
+- **TypeScript**: Tipagem estática
+- **Vite**: Bundler e servidor de desenvolvimento rápido
+- **CSS**: Estilização customizada
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Funcionalidades
+- Envio de múltiplos arquivos GNSS para o PPP do IBGE
+- Preenchimento dos parâmetros obrigatórios (tipo de levantamento, modelo de antena, email)
+- Download automático dos resultados (opcional)
+- Relatório dos arquivos baixados com sucesso e dos que falharam
+- Interface moderna, responsiva e fácil de usar
 
-## Expanding the ESLint configuration
+## Como Executar o Projeto
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Pré-requisitos
+- Node.js instalado ([download aqui](https://nodejs.org/))
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Passo a Passo
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1. **Clone o repositório ou baixe os arquivos do projeto**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+2. **Instale as dependências**
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+   No terminal, dentro da pasta do projeto:
+   ```sh
+   npm install
+   ```
+
+3. **Execute o projeto em modo de desenvolvimento**
+
+   ```sh
+   npm run dev
+   ```
+
+   O terminal mostrará o endereço local, geralmente:
+   
+   [http://localhost:5173](http://localhost:5173)
+
+4. **Acesse a aplicação pelo navegador**
+
+5. **Utilize a interface para selecionar arquivos GNSS, preencher os campos obrigatórios e enviar para processamento.**
+
+   - Marque a opção "Baixar automaticamente após processar" para que os arquivos sejam baixados assim que o IBGE retornar o link.
+   - O relatório mostrará quais arquivos foram baixados com sucesso e quais falharam.
+
+## Observações
+- Não é necessário backend local: a aplicação se conecta diretamente à API oficial do IBGE.
+- O processamento e o download dependem da disponibilidade do serviço do IBGE.
+- Os arquivos processados ficam disponíveis para download conforme o link retornado pelo IBGE.
+
+---
+
+Desenvolvido para facilitar o processamento em lote de arquivos GNSS no PPP do IBGE.
+
